@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block title %}Art in a hammock - Computer Vision Web App{% endblock %}
+{% block content %}
+<h1>Learn Computer Vision by coding art!</h1>
+
+<div class="projects-grid">
+    <!-- Project 1 -->
+    <div class="project-item">
+        <a href="{{ url_for('app.project1') }}">
+            <div class="overlay">
+                <div class="text">Project 1: Edge Detection</div>
+            </div>
+            <img src="{{ url_for('static', filename='images/project1.gif') }}" alt="Project 1">
+        </a>
+    </div>
+    <!-- Add more projects similarly -->
+</div>
+{% endblock %}

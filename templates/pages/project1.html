@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+{% block title %}Project 1 - Edge Detection{% endblock %}
+{% block content %}
+<h1>Project 1: Edge Detection</h1>
+
+<div class="project-container">
+    <div class="project-description">
+        <p>This project demonstrates edge detection using the Canny algorithm.</p>
+        <a href="https://github.com/DerrickDDInAI/art-in-a-hammock" target="_blank">View Source Code on GitHub</a>
+    </div>
+    <div class="project-gif">
+        <img src="{{ url_for('static', filename='images/project1.gif') }}" alt="Project 1 Example">
+    </div>
+</div>
+
+<!-- Combine the upload and parameters form -->
+<form id="upload-form" method="post" enctype="multipart/form-data">
+    <div class="upload-container">
+        <h2>Upload Media</h2>
+        <input type="file" name="media" id="media" multiple directory webkitdirectory mozdirectory>
+        <label for="media">Choose files or folders</label>
+        <p>Or drag and drop files here</p>
+    </div>
+    <div class="parameters-container">
+        <h2>Parameters</h2>
+        <label for="parameter">Edge Detection Threshold:</label>
+        <input type="number" id="parameter" name="parameter" min="1" max="100" value="50">
+    </div>
+    <button type="submit" id="submit-button">Submit</button>
+</form>
+
+{% if processed_files %}
+    <h2>Results</h2>
+    <div class="results-container">
+        {% for file in processed_files %}
+            <div class="result-item">
+                <img src="{{ url_for('app.processed_file', filename=file) }}" alt="Processed Image">
+                <p>{{ file }}</p>
+            </div>
+        {% endfor %}
+    </div>
+{% endif %}
+
+
+<script>
+</script>
+{% endblock %}

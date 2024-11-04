@@ -1,0 +1,15 @@
+<header>
+    <nav>
+        <ul>
+            <li><a href="{{ url_for('app.home') }}">Home</a></li>
+            <li class="dropdown">
+                <a href="#">Projects</a>
+                <ul class="dropdown-content">
+                    <li><a href="{{ url_for('app.project1') }}">Project 1</a></li>
+                    <!-- Add more projects here -->
+                </ul>
+            </li>
+            <li><a href="https://github.com/DerrickDDInAI/">GitHub</a></li>
+        </ul>
+    </nav>
+</header>
