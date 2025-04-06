@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block main %}
+<h1>{% block title %}Upload an Image{% endblock %}</h1>
+<form method="POST" enctype="multipart/form-data">
+    <input type="file" accept="image/*" name="image" required>
+    <input type="submit" value="Upload">
+</form>
+
+<div class="image-container">
+    {% if image_data %}
+    <h2>Uploaded Image</h2>
+    <img src="data:image/jpeg;base64,{{ image_data|b64encode }}" alt="Uploaded Image">
+    {% endif %}
+</div>
+{% endblock %}

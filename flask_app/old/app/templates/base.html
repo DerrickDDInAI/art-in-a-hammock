@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>APP - {% block title %}{% endblock %}</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles/style.css') }}" />
+</head>
+
+<body>
+  {% include 'components/header.html' %}
+  <main>
+    {% block main %}{% endblock %}
+  </main>
+  <!-- <footer></footer> -->
+</body>
+
+</html>

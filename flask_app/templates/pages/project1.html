@@ -34,7 +34,8 @@
     <div class="results-container">
         {% for file in processed_files %}
             <div class="result-item">
-                <img src="{{ url_for('app.processed_file', filename=file) }}" alt="Processed Image">
+                <!-- <img src="{{ url_for('app.processed_file', filename=file) }}" alt="Processed Image"> -->
+                <img src="data:image/jpeg;base64,{{ image_data|b64encode }}" alt="Uploaded Image">
                 <p>{{ file }}</p>
             </div>
         {% endfor %}
@@ -45,3 +46,20 @@
 <script>
 </script>
 {% endblock %}
+
+
+
+
+
+<h1>{% block title %}Upload an Image{% endblock %}</h1>
+<form method="POST" enctype="multipart/form-data">
+    <input type="file" accept="image/*" name="image" required>
+    <input type="submit" value="Upload">
+</form>
+
+<div class="image-container">
+    {% if image_data %}
+    <h2>Uploaded Image</h2>
+    <img src="data:image/jpeg;base64,{{ image_data|b64encode }}" alt="Uploaded Image">
+    {% endif %}
+</div>

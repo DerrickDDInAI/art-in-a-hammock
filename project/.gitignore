@@ -1,27 +1,3 @@
-# Byte-compiled / optimized / DLL files
-__pycache__/
-*.py[cod]
-*$py.class
-
-# Virtual environment
-venv/
-env/
-
-# Uploads and processed files
-uploads/
-processed/
-
-# Pytest cache
-.cache/
-
-# Config files
-*.env
-instance/
-
-# macOS files
-.DS_Store
-
-
 # Logs
 logs
 *.log
