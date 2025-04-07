@@ -2,6 +2,7 @@ import React from 'react';
 import { Github, ExternalLink, Linkedin, Mail, Sun, Moon, HelpCircle } from 'lucide-react';
 import { projects } from './data/projects';
 import { Logo } from './components/Logo';
+import { WebsiteName } from './components/WebsiteName';
 import { useTheme } from './context/ThemeContext';
 
 function App() {
@@ -24,11 +25,12 @@ function App() {
         <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
           <div className="flex items-center space-x-4">
             <Logo className={`w-8 h-8 ${isDark ? 'text-blue-400' : 'text-blue-600'}`} />
-            <img
+            {/* <img
               src="src/components/Website-name.png"
               alt="Art in a Hammock"
               className="h-8 w-auto"
-            />
+            /> */}
+            <WebsiteName className={`w-auto h-8 ${isDark ? 'text-blue-400' : 'text-blue-600'}`} />
           </div>
           
           <div className="flex items-center space-x-4">
