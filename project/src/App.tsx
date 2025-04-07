@@ -86,8 +86,8 @@ function App() {
             Interactive Computer Vision Gallery
           </h2>
           <p className={`${isDark ? 'text-gray-400' : 'text-gray-600'}`}>
-            Explore traditional computer vision techniques through interactive examples.
-            Each project includes a live demo and access to the source code via Google Colab.
+          Explore computer vision with OpenCV, Pillow, and more through interactive examples. 
+          Each project includes a live demo and source code on Google Colab.
           </p>
         </div>
 
