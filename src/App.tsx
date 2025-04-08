@@ -16,8 +16,8 @@ function App() {
       }`}
       style={{
         backgroundImage: isDark
-          ? `linear-gradient(rgba(17, 24, 39, 0.9), rgba(17, 24, 39, 0.9)), url('src/components/Background.png')`
-          : `linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url('src/components/Background.png')`
+          ? `linear-gradient(rgba(17, 24, 39, 0.9), rgba(17, 24, 39, 0.9)), url('/Background.png')`
+          : `linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url('/Background.png')`
       }}
     >
       {/* Header */}
